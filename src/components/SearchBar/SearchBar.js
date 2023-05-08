@@ -2,29 +2,32 @@ import React, { useState } from "react";
 
 import './SearchBar.css'
 
-function SearchBar() {
+
+let searchBoxValue;
+function SearchBar(props) {
 
     const [searchTerm, setSearchTerm] = useState("")
 
-    const handleSubmit = (event) => {
+    const handleChange = (event) => {
         event.preventDefault()
-        const searchBox = event.target.querySelector('input[id="search"]').value
-        setSearchTerm(searchBox)
-
+        searchBoxValue = event.target.value.toLowerCase()
+        setSearchTerm(searchBoxValue)
+    
     }
 
     return (
-        <div id="searchBar" onSubmit={handleSubmit}>
+        <div id="searchBar" >
             <form action="#" id="searchForm">
-                <input type="text" id="search" placeholder="Enter a song, artist, or album . . ." />
+                <input type="search" id="search" value={searchTerm} placeholder="Enter a song, artist, or album . . ." onChange={handleChange}/>
                 <input type="submit" value="Search" id="searchButton"/>
             </form>
             <div className="searchTerm">
                 <h3>You searched for: {searchTerm}</h3>
             </div>
-
         </div>
     )
 }
 
 export default SearchBar
+
+export { searchBoxValue }

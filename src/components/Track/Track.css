@@ -1,0 +1,27 @@
+.track {
+    width: 80%;
+    margin: 3rem auto;
+    padding: 1rem;
+    border: 2px solid hsla(240, 50%, 50%, 1);
+    border-radius: 0.625rem;
+    background-color: hsla(240, 30%, 80%,1);
+
+    display:
+}
+
+.artistAlbumId {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.joins {
+    font-size: 0.8rem;
+    font-weight: 500;
+    font-style: italic;
+    letter-spacing: 0.1rem;
+}
+
+.addButton {
+    width: 30%;
+}
