@@ -1,0 +1,38 @@
+#searchBar {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: hsla(240, 30%, 90%, 0.4);
+}
+form#searchForm {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+input {
+    font-size: 1.25rem;
+    border-radius: 0.625rem;
+}
+
+input#search {
+    width: 70%;
+    text-align: center;
+}
+
+
+input#search:active {
+    background-color: hsla(0, 90%, 30%, 0.2)
+}
+
+#searchButton {
+    background-color: hsla(120, 50%, 40%, 0.4);
+}
+
+#searchButton:hover {
+    background-color: hsla(120, 80%, 40%, 0.6);
+    border-bottom: 3px solid hsla(120, 80%, 40%, 0.6);
+}
+#searchButton:active {
+    background-color: hsla(0, 90%, 30%, 0.2);
+    border-bottom: 1px solid gray;
+}
